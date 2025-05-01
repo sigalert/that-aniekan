@@ -1,122 +1,293 @@
 <!DOCTYPE HTML>
 <!--
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Astral by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
-	<head>
-		<title>Astral by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style type="text/css">
-			.centerImg
-			{
-			 text-align:center;
-			 display:block;
-			}
-			</style>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+    <title>Astral by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style type="text/css">
+        .centerImg {
+            text-align: center;
+            display: block;
+        }
+        /* —————————————————————————————————————————— */
+        /* Word-Cloud Globe container (replace 300px with your me.jpg size) */
+        #globe-container {
+            width: 450px;
+            height: 394px;
+            margin: 0 auto;
+            background: #000;
+        }
+        /* force the WebGL canvas to fill that box */
+        #globe-container canvas {
+            width: 100% !important;
+            height: 100% !important;
+            display: block;
+        }
+    </style> 
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper-->
-			<div id="wrapper">
+    <!-- Wrapper-->
+    <div id="wrapper">
 
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-						<a href="https://deeplyrandom.bsky.social" class="icon brands fa-twitter"><span>Bluesky</span></a> <!--#twitter.com/ajlkn-->
-						<!--<a href="https://deeplyrandom.bsky.social" class="icon brands fa-bluesky"><span>Bluesky</span></a>-->
-					</nav>
+        <!-- Nav -->
+        <nav id="nav">
+            <a href="#" class="icon solid fa-home"><span>Home</span></a>
+            <a href="#work" class="icon solid fa-folder"><span>Work</span></a>
+            <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+            <a href="https://deeplyrandom.bsky.social" class="icon brands fa-twitter" target="newin"><span>Bluesky</span></a>
+           <!-- <a href="https://deeplyrandom.bsky.social" class="icon brands fa-twitter"><span>Bluesky</span></a>-->
 
-				<!-- Main -->
-					<div id="main">
+        </nav>
 
-						<!-- Me -->
-							<article id="home" class="panel intro">
-								<header>
-									<h1>Aniekan Akpaffiong</h1>
-									<p>Passionate technology evangelist. Currently building up my knowledge in Machine Learning and Generative AI.</p>
-								</header>
-								<!--<a href="#work" class="jumplink pic">
-									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>-->
-									<img src="images/me.jpg" alt="" />
-								</a>
-							</article>
+        <!-- Main -->
+        <div id="main">
 
-						<!-- Work -->
-							<article id="work" class="panel">
-								<header>
-									<h2>Work</h2>
-								</header>
-								<p>
-									Here are examples of my public projects across websites, articles, architecture design: 
-								</p>
-								<section>
-									<div class="row">
-										<div class="col-4 col-6-medium col-12-small">Presentation
-											<a href="https://www.slideshare.net/slideshow/networking-brush-up-for-amazon-aws-administrators/84632360" class="image fit"><img src="images/networkaws01.png" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">Project
-											<a href="https://github.com/sigalert/flashcards" class="image fit"><img src="images/flashcard.png" alt=""></a>
-											<!--.../Documents/Data/Projects/Padawan/Launch/Projects/CO2/Artifacts/Flashcard-->
-										</div>
-										<div class="col-4 col-6-medium col-12-small">Design
-											<a href="https://github.com/sigalert/tracker" class="image fit"><img src="images/ptarchitectr.png" alt=""></a>
-										</div>
-									</div>
-								</section>
-							</article>
+            <!-- Me -->
+            <article id="home" class="panel intro">
+                <header>
+                    <h1>Aniekan Akpaffiong</h1>
+                    <p>Passionate technology evangelist. Currently focused on developing the next generation of 
+                        cloud application developers and artificial intelligence builders.</p>
+                </header>
 
-						<!-- Contact -->
-							<article id="contact" class="panel">
-								<header>
-									<h2>Contact Me</h2>
-								</header>
-								<form action="#" method="post">
-									<div>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<input type="text" name="name" placeholder="Name" />
-											</div>
-											<div class="col-6 col-12-medium">
-												<input type="text" name="email" placeholder="Email" />
-											</div>
-											<div class="col-12">
-												<input type="text" name="subject" placeholder="Subject" />
-											</div>
-											<div class="col-12">
-												<textarea name="message" placeholder="Message" rows="4"></textarea>
-											</div>
-											<div class="col-12">
-												<input type="submit" value="Send Message" />
-											</div>
-										</div>
-									</div>
-								</form>
-							</article>
+                <!-- globe replaces your headshot -->
+                <!--<a href="#work" class="jumplink pic">
+                    <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span> </a>
+                </a>-->
+                <div id="globe-container"></div>
+            </article>
 
-					</div>
+            <!-- Work -->
+            <article id="work" class="panel">
+                <header>
+                    <h2>Work</h2>
+                </header>
+                <p>Here are examples of my public projects across websites, articles, architecture design:</p>
+                <section>
+                    <div class="row">
+                        <div class="col-4 col-6-medium col-12-small">Presentation
+                            <a href="https://www.slideshare.net/slideshow/networking-brush-up-for-amazon-aws-administrators/84632360" class="image fit" target="newin"><img src="images/networkaws01.png" alt=""></a>
+                        </div>
+                        <div class="col-4 col-6-medium col-12-small">Project
+                            <a href="https://github.com/sigalert/flashcards" class="image fit" target="newin"><img src="images/flashcard.png" alt=""></a>
+                        </div>
+                        <div class="col-4 col-6-medium col-12-small">Design
+                            <a href="https://github.com/sigalert/tracker" class="image fit" target="newin"><img src="images/ptarchitectr.png" alt=""></a>
+                        </div>
+                    </div>
+                </section>
+            </article>
 
-				<!-- Footer -->
-					<div id="footer">
-						<ul class="copyright">
-							<li>&copy;</li><li>Design: Astral <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
+            <!-- Contact -->
+            <article id="contact" class="panel">
+                <header>
+                    <h2>Contact Me</h2>
+                </header>
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col-6 col-12-medium"><input type="text" name="name" placeholder="Name" /></div>
+                        <div class="col-6 col-12-medium"><input type="text" name="email" placeholder="Email" /></div>
+                        <div class="col-12"><input type="text" name="subject" placeholder="Subject" /></div>
+                        <div class="col-12"><textarea name="message" placeholder="Message" rows="4"></textarea></div>
+                        <div class="col-12"><input type="submit" value="Send Message" /></div>
+                    </div>
+                </form>
+            </article>
 
-			</div>
+        </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <!-- Footer -->
+        <div id="footer">
+            <ul class="copyright">
+                <li>&copy;</li><li>Design: Astral <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
 
-	</body>
+    </div>
+
+    <!-- Original page scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- —————————————————————————————————————————— -->
+    <!-- Word-Cloud Globe module (from new-whole-cloud02.html) -->
+    <script type="module">
+        import * as THREE from 'https://unpkg.com/three@0.159.0/build/three.module.js';
+        import Stats     from 'https://unpkg.com/three@0.159.0/examples/jsm/libs/stats.module.js';
+
+        // container & scene
+        const container = document.getElementById('globe-container');
+        const scene     = new THREE.Scene();
+
+        // camera sized to container
+        const aspect = container.clientWidth / container.clientHeight;
+        const camera = new THREE.PerspectiveCamera(40, aspect, 0.1, 1000);
+        camera.position.set(0, 0, 200);
+
+        // renderer
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        container.appendChild(renderer.domElement);
+
+        // performance monitor
+        const stats = new Stats();
+        container.appendChild(stats.dom);
+
+        // immediately hide the DOM element
+        stats.dom.style.display = 'none';
+
+        // your word data
+        const wordsData = [
+            { text: 'Pr. Sys. Eng.',    weight: 10 },
+            { text: 'Instructor',        weight: 10 },
+            { text: 'Acct Supp. Mgr.',  weight: 10 },
+            { text: 'AWS',               weight: 10 },
+            { text: 'HPE',               weight: 10 },
+            { text: 'Cisco/Linksys',     weight: 10 },
+            { text: 'USC',               weight: 10 },
+            { text: 'UofR',             weight: 10 },
+            { text: '9x AWS Cert',      weight: 10 },
+            { text: 'B.S.E.E.',          weight: 10 },
+            { text: 'MBA',               weight: 10 },
+            { text: 'Lifelong Learner',  weight: 10 }
+        ];
+
+        // create text sprite
+        function createTextSprite(text, weight) {
+            const size = 8 + weight;
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.font = `${size}px Arial`;
+            const w = ctx.measureText(text).width;
+            canvas.width  = w;
+            canvas.height = size * 1.2;
+
+            ctx.font = `${size}px Arial`;
+            ctx.fillStyle = `hsl(${Math.random() * 360}, 70%, 70%)`;
+            ctx.fillText(text, 0, size);
+
+            const texture = new THREE.CanvasTexture(canvas);
+            const material = new THREE.SpriteMaterial({ map: texture, transparent: true });
+            const sprite = new THREE.Sprite(material);
+
+            const scale = 0.5;
+            sprite.scale.set(canvas.width * scale, canvas.height * scale, 1);
+            sprite.userData = { originalScale: sprite.scale.clone() };
+
+            return sprite;
+        }
+
+        // scatter words
+        function addWords() {
+            for (const { text, weight } of wordsData) {
+                const sprite = createTextSprite(text, weight);
+                const u     = Math.random();
+                const r     = 100 * Math.cbrt(u);
+                const theta = 2 * Math.PI * Math.random();
+                const phi   = Math.acos(2 * Math.random() - 1);
+
+                sprite.position.set(
+                    r * Math.sin(phi) * Math.cos(theta),
+                    r * Math.cos(phi),
+                    r * Math.sin(phi) * Math.sin(theta)
+                );
+                scene.add(sprite);
+            }
+        }
+
+        // interaction state
+        const raycaster = new THREE.Raycaster();
+        const mouse     = new THREE.Vector2();
+        let isDragging  = false;
+        let prev        = { x: 0, y: 0 };
+        let velocity    = { x: 0, y: 0 };
+        const rotSpeed  = 0.005;
+        const friction  = 0.97;
+
+        function updateRotation() {
+            if (!isDragging) {
+                scene.rotation.y += velocity.x;
+                scene.rotation.x += velocity.y;
+                velocity.x *= friction;
+                velocity.y *= friction;
+            }
+        }
+
+        // mouse controls
+        renderer.domElement.addEventListener('mousedown', e => {
+            isDragging = true;
+            prev = { x: e.clientX, y: e.clientY };
+        });
+        renderer.domElement.addEventListener('mousemove', e => {
+            mouse.x = (e.clientX / container.clientWidth) * 2 - 1;
+            mouse.y = -(e.clientY / container.clientHeight) * 2 + 1;
+            if (!isDragging) return;
+            const dx = e.clientX - prev.x;
+            const dy = e.clientY - prev.y;
+            velocity.x = dx * rotSpeed;
+            velocity.y = dy * rotSpeed;
+            scene.rotation.y += velocity.x;
+            scene.rotation.x += velocity.y;
+            prev = { x: e.clientX, y: e.clientY };
+        });
+        ['mouseup', 'mouseleave'].forEach(evt =>
+            renderer.domElement.addEventListener(evt, () => isDragging = false)
+        );
+
+        // zoom
+        const MIN_Z = 150, MAX_Z = 400;
+        renderer.domElement.addEventListener('wheel', e => {
+            e.preventDefault();
+            camera.position.z = THREE.MathUtils.clamp(
+                camera.position.z + e.deltaY * 0.1,
+                MIN_Z,
+                MAX_Z
+            );
+        });
+
+        // hover scale
+        function checkHover() {
+            raycaster.setFromCamera(mouse, camera);
+            const hits = raycaster.intersectObjects(scene.children);
+            scene.children.forEach(obj => {
+                if (obj.isSprite) obj.scale.copy(obj.userData.originalScale);
+            });
+            if (hits.length > 0 && hits[0].object.isSprite) {
+                hits[0].object.scale.multiplyScalar(1.2);
+            }
+        }
+
+        // handle resize to keep matching the container
+        window.addEventListener('resize', () => {
+            const w = container.clientWidth, h = container.clientHeight;
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+            renderer.setSize(w, h);
+        });
+
+        // init & animate
+        addWords();
+        (function animate() {
+            requestAnimationFrame(animate);
+            stats.begin();
+            updateRotation();
+            checkHover();
+            renderer.render(scene, camera);
+            stats.end();
+        })();
+    </script>
+
+</body>
 </html>
