@@ -6,7 +6,7 @@
 -->
 <html lang="en">
 <head>
-    <title>Astral by HTML5 UP</title>
+    <title>Technologist Aniekan</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -17,7 +17,7 @@
             display: block;
         }
         /* —————————————————————————————————————————— */
-        /* Word-Cloud Globe container (replace 300px with your me.jpg size) */
+        /* Word-Cloud Globe container (replace 300px with the size for me.jpg) */
         #globe-container {
             width: 450px;
             height: 394px;
@@ -30,6 +30,11 @@
             height: 100% !important;
             display: block;
         }
+        /* Highlight Work-panel images on hover with a bounding box */
+        #work.panel .image.fit img:hover {
+            outline: 2px solid #FF9900;
+            outline-offset: 2px;
+        }
     </style> 
 </head>
 <body class="is-preload">
@@ -41,8 +46,8 @@
         <nav id="nav">
             <a href="#" class="icon solid fa-home"><span>Home</span></a>
             <a href="#work" class="icon solid fa-folder"><span>Work</span></a>
-            <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-            <a href="https://deeplyrandom.bsky.social" class="icon brands fa-twitter" target="newin"><span>Bluesky</span></a>
+            <!--<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>-->
+            <a href="https://www.linkedin.com/in/aniekan-akpaffiong" class="icon brands fa-linkedin" target="newin"><span>LinkedIn</span></a>
            <!-- <a href="https://deeplyrandom.bsky.social" class="icon brands fa-twitter"><span>Bluesky</span></a>-->
 
         </nav>
@@ -58,7 +63,7 @@
                         cloud application developers and artificial intelligence builders.</p>
                 </header>
 
-                <!-- globe replaces your headshot -->
+                <!-- placed globe headshot might have gone -->
                 <!--<a href="#work" class="jumplink pic">
                     <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span> </a>
                 </a>-->
@@ -73,14 +78,22 @@
                 <p>Here are examples of my public projects across websites, articles, architecture design:</p>
                 <section>
                     <div class="row">
-                        <div class="col-4 col-6-medium col-12-small">Presentation
-                            <a href="https://www.slideshare.net/slideshow/networking-brush-up-for-amazon-aws-administrators/84632360" class="image fit" target="newin"><img src="images/networkaws01.png" alt=""></a>
-                        </div>
-                        <div class="col-4 col-6-medium col-12-small">Project
+                        <div class="col-6-medium col-12-small">Channel
+                            <a href="https://www.youtube.com/@FoundationsofAI" class="image fit" target="newin"><img src="images/FIA.png" alt=""></a>
+                        <!--<div class="col-6 col-6-medium col-12-small">
+                            <a href="https://www.youtube.com/@FoundationsofAI" class="image fit" target="newin"><img src="images/blank.png" alt=""></a>
+                        </div>-->
+                        <div class="col-6 col-6-medium col-12-small"><p></p>Project
                             <a href="https://github.com/sigalert/flashcards" class="image fit" target="newin"><img src="images/flashcard.png" alt=""></a>
-                        </div>
-                        <div class="col-4 col-6-medium col-12-small">Design
+                        </div> 
+                       <!-- <div class="col-6 col-6-medium col-12-small">
+                            <a href="https://github.com/sigalert/flashcards" class="image fit" target="newin"><img src="images/blank.png" alt=""></a>
+                        </div>-->
+                        <div class="col-6 col-6-medium col-12-small"><p></p>Design
                             <a href="https://github.com/sigalert/tracker" class="image fit" target="newin"><img src="images/ptarchitectr.png" alt=""></a>
+                        </div>
+                        <div class="col-6 col-6-medium col-12-small"><p></p>Presentation
+                            <a href="https://www.slideshare.net/slideshow/networking-brush-up-for-amazon-aws-administrators/84632360" class="image fit" target="newin"><img src="images/networkaws01.png" alt=""></a>
                         </div>
                     </div>
                 </section>
@@ -125,30 +138,29 @@
     <script type="module">
         import * as THREE from 'https://unpkg.com/three@0.159.0/build/three.module.js';
         import Stats     from 'https://unpkg.com/three@0.159.0/examples/jsm/libs/stats.module.js';
-
+    
         // container & scene
         const container = document.getElementById('globe-container');
         const scene     = new THREE.Scene();
-
+    
         // camera sized to container
         const aspect = container.clientWidth / container.clientHeight;
         const camera = new THREE.PerspectiveCamera(40, aspect, 0.1, 1000);
         camera.position.set(0, 0, 200);
-
+    
         // renderer
         const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(container.clientWidth, container.clientHeight);
         renderer.setPixelRatio(window.devicePixelRatio);
         container.appendChild(renderer.domElement);
-
+    
         // performance monitor
         const stats = new Stats();
         container.appendChild(stats.dom);
-
         // immediately hide the DOM element
         stats.dom.style.display = 'none';
-
-        // your word data
+    
+        // my word data
         const wordsData = [
             { text: 'Pr. Sys. Eng.',    weight: 10 },
             { text: 'Instructor',        weight: 10 },
@@ -157,13 +169,13 @@
             { text: 'HPE',               weight: 10 },
             { text: 'Cisco/Linksys',     weight: 10 },
             { text: 'USC',               weight: 10 },
-            { text: 'UofR',             weight: 10 },
-            { text: '9x AWS Cert',      weight: 10 },
+            { text: 'UofR',              weight: 10 },
+            { text: '8x AWS Cert',       weight: 10 },
             { text: 'B.S.E.E.',          weight: 10 },
             { text: 'MBA',               weight: 10 },
             { text: 'Lifelong Learner',  weight: 10 }
         ];
-
+    
         // create text sprite
         function createTextSprite(text, weight) {
             const size = 8 + weight;
@@ -173,22 +185,22 @@
             const w = ctx.measureText(text).width;
             canvas.width  = w;
             canvas.height = size * 1.2;
-
+    
             ctx.font = `${size}px Arial`;
             ctx.fillStyle = `hsl(${Math.random() * 360}, 70%, 70%)`;
             ctx.fillText(text, 0, size);
-
+    
             const texture = new THREE.CanvasTexture(canvas);
             const material = new THREE.SpriteMaterial({ map: texture, transparent: true });
             const sprite = new THREE.Sprite(material);
-
+    
             const scale = 0.5;
             sprite.scale.set(canvas.width * scale, canvas.height * scale, 1);
             sprite.userData = { originalScale: sprite.scale.clone() };
-
+    
             return sprite;
         }
-
+    
         // scatter words
         function addWords() {
             for (const { text, weight } of wordsData) {
@@ -197,7 +209,7 @@
                 const r     = 100 * Math.cbrt(u);
                 const theta = 2 * Math.PI * Math.random();
                 const phi   = Math.acos(2 * Math.random() - 1);
-
+    
                 sprite.position.set(
                     r * Math.sin(phi) * Math.cos(theta),
                     r * Math.cos(phi),
@@ -206,7 +218,7 @@
                 scene.add(sprite);
             }
         }
-
+    
         // interaction state
         const raycaster = new THREE.Raycaster();
         const mouse     = new THREE.Vector2();
@@ -214,8 +226,9 @@
         let prev        = { x: 0, y: 0 };
         let velocity    = { x: 0, y: 0 };
         const rotSpeed  = 0.005;
+        const initialBoost = 75;     // To control load-spin magnitude on itial load/reload
         const friction  = 0.97;
-
+    
         function updateRotation() {
             if (!isDragging) {
                 scene.rotation.y += velocity.x;
@@ -224,7 +237,7 @@
                 velocity.y *= friction;
             }
         }
-
+    
         // mouse controls
         renderer.domElement.addEventListener('mousedown', e => {
             isDragging = true;
@@ -245,7 +258,7 @@
         ['mouseup', 'mouseleave'].forEach(evt =>
             renderer.domElement.addEventListener(evt, () => isDragging = false)
         );
-
+    
         // zoom
         const MIN_Z = 150, MAX_Z = 400;
         renderer.domElement.addEventListener('wheel', e => {
@@ -256,7 +269,7 @@
                 MAX_Z
             );
         });
-
+    
         // hover scale
         function checkHover() {
             raycaster.setFromCamera(mouse, camera);
@@ -268,7 +281,7 @@
                 hits[0].object.scale.multiplyScalar(1.2);
             }
         }
-
+    
         // handle resize to keep matching the container
         window.addEventListener('resize', () => {
             const w = container.clientWidth, h = container.clientHeight;
@@ -276,9 +289,18 @@
             camera.updateProjectionMatrix();
             renderer.setSize(w, h);
         });
-
+    
         // init & animate
         addWords();
+        // — randomize starting orientation & initial spin on load
+        scene.rotation.x = Math.random() * Math.PI;
+        scene.rotation.y = Math.random() * Math.PI * 2;
+        // The next two lines are commented out to make way for...
+        //velocity.x       = (Math.random() - 0.5) * rotSpeed;
+        //velocity.y       = (Math.random() - 0.5) * rotSpeed;
+        // ...These two line that exaggerate the Word Cloud rotation on page load/reload. "initialBoost" is a constant, defined above
+        velocity.x       = (Math.random() - 0.5) * rotSpeed * initialBoost;
+        velocity.y       = (Math.random() - 0.5) * rotSpeed * initialBoost;
         (function animate() {
             requestAnimationFrame(animate);
             stats.begin();
