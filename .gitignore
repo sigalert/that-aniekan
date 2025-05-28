@@ -1,0 +1,12 @@
+# Byte-compiled / virtualenv
+__pychache__/
+*.py[cod]
+venv/
+.env
+
+# AWS Lambda artifacts
+*.zip
+
+# Directory artifacts
+Archive/
+*.docx
